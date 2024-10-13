@@ -1,14 +1,14 @@
 import './App.css'
-import {Button} from "@/components/ui/button.tsx";
+import {Header} from "@/components/shared";
 
 function App() {
 
   return (
-      <>
-          <h1>Welcome to React!</h1>
-          <p>This is a simple React app.</p>
-          <Button className="btn">Click me</Button>
-      </>
+      <div className="min-h-screen flex justify-center">
+          <div className="min-w-[85vw]">
+              <Header/>
+          </div>
+      </div>
   )
 }
 
