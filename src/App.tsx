@@ -1,15 +1,14 @@
-import './App.css'
+import PageRouter from "@/pageRouter.tsx";
 import {Header} from "@/components/shared";
 
-function App() {
 
-  return (
-      <div className="min-h-screen flex justify-center">
-          <div className="min-w-[85vw]">
-              <Header/>
-          </div>
-      </div>
-  )
+function App() {
+    return (
+        <>
+            <Header/>
+            <PageRouter/>
+        </>
+    )
 }
 
 export default App
