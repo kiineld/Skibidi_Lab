@@ -7,15 +7,15 @@ export function Header (){
         <div className="mt-2">
             <div className="sm:flex hidden justify-center items-center min-h-[4vh]">
                 {/* LEFT PART OF HEADER */}
-                <div className="gap-2 flex mr-auto ml-auto">
-                    <Button variant="ghost">О нас</Button>
-                    <Button variant="ghost">О нашем проекте</Button>
-                    <Button variant="ghost">Контакты</Button>
-                    <Button variant="ghost">Скачать</Button>
+                <div className="gap-2 flex mr-auto ml-10">
+                    <Button variant="ghost" className="underline underline-offset-4">О нас</Button>
+                    <Button variant="ghost" className="underline underline-offset-4">О нашем проекте</Button>
+                    <Button variant="ghost" className="underline underline-offset-4">Контакты</Button>
+                    <Button variant="ghost" className="underline underline-offset-4">Скачать</Button>
                 </div>
 
                 {/* RIGHT PART OF HEADER */}
-                <div className="gap-2 flex mr-auto">
+                <div className="gap-2 flex mr-10">
                     <a href="/auth"
                        className={buttonVariants({variant: "default", className: "group relative gap-2"})}>
                         Войти
