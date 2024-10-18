@@ -1,17 +1,43 @@
-import {Button, buttonVariants} from "@/components/ui";
+import {buttonVariants} from "@/components/ui";
 import {ArrowRight, User} from "lucide-react";
 import {Separator} from "@/components/ui/separator.tsx";
 
 export function Header (){
+    const links = [
+        {
+            id: "1",
+            link: "/#about",
+            title: "О нас"
+        },
+        {
+            id: "2",
+            link: "/#aboutproject",
+            title: "О нашем проекте"
+        },
+        {
+            id: "3",
+            link: "/#contacts",
+            title: "Контакты"
+        },
+        {
+            id: "4",
+            link: "/#download",
+            title: "Скачать"
+        }
+    ]
+
     return(
-        <div className="mt-2">
+        <div className="mt-2 mb-5">
             <div className="sm:flex hidden justify-center items-center min-h-[4vh]">
                 {/* LEFT PART OF HEADER */}
                 <div className="gap-2 flex mr-auto ml-10">
-                    <Button variant="ghost" className="underline underline-offset-4">О нас</Button>
-                    <Button variant="ghost" className="underline underline-offset-4">О нашем проекте</Button>
-                    <Button variant="ghost" className="underline underline-offset-4">Контакты</Button>
-                    <Button variant="ghost" className="underline underline-offset-4">Скачать</Button>
+                    {
+                        links.map((item) =>
+                            <a key={item.id} href={item.link} className={buttonVariants({variant: "ghost", className: "underline underline-offset-4"})}>
+                                {item.title}
+                            </a>
+                        )
+                    }
                 </div>
 
                 {/* RIGHT PART OF HEADER */}

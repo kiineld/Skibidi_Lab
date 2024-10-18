@@ -16,11 +16,11 @@ function Authorization() {
     const form = useForm()
     return (
         <div className="flex min-w-full min-h-[95vh] justify-center items-center">
-            <div className="border rounded-2xl p-12 flex flex-col">
+            <div className="border rounded-2xl p-12 flex flex-col w-[50vw] h-[50vh]">
                 <Form {...form}>
                     <FormField name="authorization" control={form.control} render={() => (
-                        <FormItem>
-                            <FormLabel>Авторизоваться</FormLabel>
+                        <FormItem className="flex flex-col w-full h-full ring-4">
+                            <FormLabel className="text-4xl font-bold">Авторизоваться</FormLabel>
                             <FormControl>
                                 <Input placeholder="Имя пользователя"/>
                             </FormControl>
@@ -31,7 +31,7 @@ function Authorization() {
                             <FormMessage>тут должен быть вход через гитхаб/гугл</FormMessage>
                         </FormItem>
                     )}/>
-                    <Button type="submit" className="mt-4">Войти</Button>
+                    <Button type="submit" className="mt-4 text-xl">Войти</Button>
                 </Form>
             </div>
         </div>
