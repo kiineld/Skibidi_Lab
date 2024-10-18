@@ -4,10 +4,12 @@ import {Header} from "@/components/shared";
 
 function App() {
     return (
-        <>
+        <div className="min-h-screen">
             <Header/>
-            <PageRouter/>
-        </>
+            <div className="max-w-screen-xl w-[85vw] min-h-screen mx-auto ring-8">
+                <PageRouter/>
+            </div>
+        </div>
     )
 }
 
