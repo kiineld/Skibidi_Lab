@@ -56,7 +56,7 @@ export function Header (){
 
             <div className="flex sm:hidden justify-center items-center min-h-[4vh]">
                 <div className="absolute top-2 right-2">
-                    <a href="/auth"
+                    <a href="/"
                        className={buttonVariants({variant: "default", className: "group relative gap-2"})}>
                         <User className="relative group-hover:opacity-0 duration-250 transition"/>
                         <ArrowRight

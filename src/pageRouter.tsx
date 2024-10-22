@@ -10,7 +10,7 @@ const PageRouter = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<AboutProject/>}/>
-                <Route path="/auth" element={<Authorization/>}/>
+                <Route path="/authorization" element={<Authorization/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>

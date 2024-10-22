@@ -1,7 +1,23 @@
 import {Card, CardContent, CardHeader} from "@/components/ui";
-
+import {GET} from "@/api/users/route.ts";
+import {useEffect} from "react";
 
 function AboutProject() {
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const result = await GET();
+                console.log(result);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData().then(r => {
+            console.log('Data fetched successfully:', r);
+        });
+    }, []);
+
     const facilities = [
         {
             id: "1",
